@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load menu_tags %}
+{% load static %}
+
+{% block content %}
+    <div>
+        {% draw_menu 'Mathematical analysis'%}
+        <br> <br> <br>
+        {% draw_menu 'Programming on C#' %}
+        <br> <br> <br>
+    </div>
+{% endblock %}

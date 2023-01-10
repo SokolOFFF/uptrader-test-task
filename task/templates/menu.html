@@ -1,0 +1,15 @@
+{% load menu_tags %}
+{% load static %}
+<a href="{{ menu.uri }}" class="menu">{{ menu.name }}</a>
+{% if unwrapped_menu_items %}
+    {% for item in unwrapped_menu_items %}
+        <br>
+        <a href="{{ item.uri }}" class="unwrapped" style="margin-left: {{item.get_margin}}px">{{ item.name }}</a>
+    {% endfor %}
+{% endif %}
+{% if active_children %}
+    {% for child in active_children %}
+        <br>
+        <a href="{{ child.uri }}" class="child" style="margin-left: {{child.get_margin}}px"> {{ child.name }}</a>
+    {% endfor %}
+{% endif %}
